@@ -1,0 +1,94 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #f7f9f5;
+  --foreground: #1a2e1a;
+  --card: #ffffff;
+  --card-foreground: #1a2e1a;
+  --primary: #2d5a27;
+  --primary-foreground: #ffffff;
+  --secondary: #e8f0e6;
+  --secondary-foreground: #2d5a27;
+  --muted: #f0f4ee;
+  --muted-foreground: #5a7a55;
+  --accent: #7cbf6e;
+  --accent-foreground: #1a2e1a;
+  --border: #d4e4d0;
+  --ring: #7cbf6e;
+  --radius: 0.75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* ── Recycling animations ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-18px) rotate(6deg); }
+  66%       { transform: translateY(-8px) rotate(-4deg); }
+}
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-24px) rotate(-8deg); }
+}
+@keyframes float3 {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-14px) scale(1.08); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes spin-slow-r {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(124,191,110,0.5); }
+  70%  { transform: scale(1);    box-shadow: 0 0 0 18px rgba(124,191,110,0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(124,191,110,0); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.anim-float  { animation: float  5s ease-in-out infinite; }
+.anim-float2 { animation: float2 7s ease-in-out infinite; }
+.anim-float3 { animation: float3 4s ease-in-out infinite; }
+.anim-spin   { animation: spin-slow   18s linear infinite; }
+.anim-spin-r { animation: spin-slow-r 14s linear infinite; }
+.anim-fadeup { animation: fadeInUp 0.7s ease both; }
+.anim-pulse  { animation: pulse-ring 2.5s ease-in-out infinite; }
+.anim-marquee { animation: marquee 20s linear infinite; }

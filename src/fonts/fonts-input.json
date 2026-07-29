@@ -1,0 +1,11 @@
+{
+  "fonts": [
+    {"family":"Plus Jakarta Sans","style":"Regular"},
+    {"family":"Plus Jakarta Sans","style":"SemiBold"},
+    {"family":"Plus Jakarta Sans","style":"Bold"},
+    {"family":"Plus Jakarta Sans","style":"ExtraBold"},
+    {"family":"Merriweather","style":"Regular"},
+    {"family":"Merriweather","style":"Bold"},
+    {"family":"Merriweather","style":"Italic"}
+  ]
+}
